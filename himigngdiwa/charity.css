@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(to bottom, #74EBD5, #9FACE6);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding:0px ;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+main{
+  min-height: calc(100vh - 180px);
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #D5C8C8;
+  border-top: 3px solid #D5C8C8;
+  background-color: #ffffff;
+  height: 30px;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0px;
+  margin-bottom: 30px;
+}
+
+nav a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #1E2022;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Outfit', Verdana, Lucida;
+  margin-top: 1px;
+}
+.navbar a:hover {
+  color: #FF6347;
+  transform: scale(1.1);
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-link.active {
+  color: #FF6347;
+}
+
+.logo {
+  max-width: 1000px;
+  height: auto;
+  margin-left: 100px;
+}
+.charityline{
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+  .submain img{
+  display:flex;
+  width: 250px;
+  height:250px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: center;
+  
+}
+
+.up{
+  display: flex;
+  margin: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.down{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: white;
+  border-top: 3px solid #D5C8C8;
+  font-family: 'Inter', Verdana;
+  font-size: 0.9rem;
+  color: #1E2022;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+
+footer div img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer p {
+  margin-top: 1px;
+  align-items: center;
+}
+
+.background-shapes{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure shapes stay behind content */
+  overflow: hidden;
+  pointer-events: none; /* Prevent shapes from blocking interactions */
+}
+
+.header, .content, .footer {
+  position: relative; 
+  z-index: 1; /* Ensure these elements are above the background shapes */
+}
+
+/* Ensure content has a higher z-index */
+.header, .content, .footer {
+  z-index: 1; /* These elements will stay in front of the shapes */
+}
+.main{
+  position: relative;
+  min-height: calc(100vh-180px);
+}
+
+.shape {
+  position: absolute;
+  border: 3px solid rgba(255, 255, 255, 0.25); 
+  background: none;
+  border-radius: 0; 
+}
+
+/* Circles */
+.shape.circle {
+  border-radius: 50%;
+}
+
+/* Squares */
+.shape.square {
+  border-radius: 0;
+}
+
+/* Triangles */
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid rgba(255, 255, 255, 0.25); /* Semi-transparent triangle */
+}
+@media (max-width:480px) {
+
+  .charityline{
+    font-size: 1rem;
+  }
+  .navbar a {
+      font-size: 10px;
+      padding: 3px;
+  }
+  
+  .navbar {
+      gap: 3px;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar a {
+      font-size: 10px;
+      padding: 1px;
+  }
+  .up{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+.down{
+
+  flex-direction: column;
+  align-items: center;
+  margin: 6px 6px 80px 6px;
+  gap: 15px;
+  
+}
+.submain{
+  gap: 10px;
+}
+
+
+.submain img{
+  width: 160px;
+  height: 160px;
+}
+
+  .logo {
+    max-width: 500px;
+    height: auto;
+    margin-left: 50px;}
+
+    footer {
+      padding: 5px;
+      font-size: 0.8rem;
+  }
+
+  footer div img {
+      width: 20px;
+      height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+  .logo {
+    max-width: 500px;
+    height: auto;
+    margin-left: 50px;
+}
+
+  .up{
+    display: flex;
+
+
+  }
+  .down{
+    display: flex;
+
+  }
+  .submain img{
+    width: 150px;
+    height: 150px;
+  }
+  .sponsorline{
+    font-size: 2rem;
+  }
+}
